@@ -22,3 +22,54 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+/*
+
+$factory->define(App\Model\Question::class, function (Faker\Generator $faker) {
+    $title=$faker->sentence;
+
+    return [
+        'title' => $title,
+        'slug' => str_slug($title),
+        'category_id' => function(){
+            return Category::all()->random();
+        },
+        'user_id' => function(){
+            return App\User::all()->random();
+        },
+    ];
+});
+
+
+$factory->define(App\Model\Reply::class, function (Faker\Generator $faker) {
+
+
+    return [
+        'body' => $factory->text,
+        'question_id' => function(){
+            return Question::all()->random();
+        },
+        'user_id' => function(){
+            return App\User::all()->random();
+        },
+    ];
+});
+
+
+$factory->define(App\Model\Category::class, function (Faker\Generator $faker) {
+
+    $word=$facker->word;
+    return [
+        'name' =>word,
+        'slug' => str_slug($word),
+    ];
+});
+
+$factory->define(App\Model\Like::class, function (Faker\Generator $faker) {
+
+    $word=$facker->word;
+    return [
+        'user_id' => function(){
+            return App\User::all()->random();
+        },
+    ];
+});*/
