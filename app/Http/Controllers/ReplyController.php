@@ -57,7 +57,7 @@ class ReplyController extends Controller
      */
     public function update(Question $question,Request $request, Reply $reply)
     {
-        $question->update($request->all());
+        $reply->update($request->all());
         return response(Response::HTTP_NO_CONTENT);
     }
 
